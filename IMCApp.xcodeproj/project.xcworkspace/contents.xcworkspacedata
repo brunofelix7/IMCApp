@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/brunofelix/workspace-ios/Curso Completo Desenvolvimento iOS 11 Swift 4/IMCApp/IMCApp/Base.lproj/ssd.storyboard">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

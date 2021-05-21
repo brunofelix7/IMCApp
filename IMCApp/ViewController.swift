@@ -10,7 +10,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tfHeight: UITextField!
     @IBOutlet weak var lbResult: UILabel!
     @IBOutlet weak var ivResult: UIImageView!
-    @IBOutlet weak var viResult: UIView!
+    @IBOutlet weak var viewResult: UIView!
     
     //  MARK: Chamado toda vez que o usuário toca na tela para remover o teclado
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -19,9 +19,18 @@ class ViewController: UIViewController {
     
     //  MARK: Executa a acao do botao calcular
     @IBAction func calculate(_ sender: Any) {
-        if let weight = Double(tfWeight.text!), let height = Double(tfHeight.text!) {
-            imc = weight / pow(height, 2)
-            showResults()
+        let weightText = tfWeight.text?.replacingOccurrences(of: ",", with: ".")
+        let heightText = tfHeight.text?.replacingOccurrences(of: ",", with: ".")
+        
+        if let weight = Double(weightText!), let height = Double(heightText!) {
+            if heightText!.contains(".") {
+                imc = weight / pow(height, 2)
+                showResults()
+            } else {
+                showAlert()
+            }
+        } else {
+            showAlert()
         }
     }
     
@@ -29,6 +38,7 @@ class ViewController: UIViewController {
     func showResults() {
         var result: String
         var image: String
+        
         switch imc {
             case 0..<16:
                 result = "Magreza"
@@ -54,9 +64,20 @@ class ViewController: UIViewController {
         ivResult.image = UIImage(named: image)
         
         //  MARK: Exibe minha view de resultado
-        viResult.isHidden = false
+        viewResult.isHidden = false
         
         //  MARK: Faz todas as views perderem o foco
         view.endEditing(true)
+    }
+    
+    func showAlert() {
+        let titleText = "Oops!"
+        let messageText = "Verifique se todos os valores informados são válidos."
+        let alert = UIAlertController(title: titleText, message: messageText, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true)
     }
 }
