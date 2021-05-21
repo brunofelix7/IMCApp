@@ -1,7 +1,9 @@
 # IMC App
 
-## Aplicativo que calcula o IMC do usuário com Swift 5 (Storyboard) + Xcode 11
+## Aplicativo que calcula o Índice de Massa Corporal (IMC) do usuário.
 
-![Captura de Tela 2020-08-11 às 22 52 59](https://user-images.githubusercontent.com/10690387/90133229-7db95000-dd45-11ea-9525-4e2300938b0e.png)
-![Captura de Tela 2020-08-12 às 23 02 52](https://user-images.githubusercontent.com/10690387/90133236-814cd700-dd45-11ea-80d8-ea88479e8b7d.png)
-![Captura de Tela 2020-08-12 às 23 03 19](https://user-images.githubusercontent.com/10690387/90133239-83169a80-dd45-11ea-92e8-f3060ed19b0b.png)
+![Screen Shot 2021-05-20 at 22 03 02](https://user-images.githubusercontent.com/10690387/119067280-14dbc400-b9b8-11eb-8c77-c05328abed9f.png)
+
+![Screen Shot 2021-05-20 at 22 03 25](https://user-images.githubusercontent.com/10690387/119067286-1907e180-b9b8-11eb-90c2-6e4393173c03.png)
+
+![Screen Shot 2021-05-20 at 22 06 29](https://user-images.githubusercontent.com/10690387/119067291-1c02d200-b9b8-11eb-8a93-51e4349af0d9.png)
